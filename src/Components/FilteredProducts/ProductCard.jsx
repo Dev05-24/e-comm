@@ -1,10 +1,8 @@
 import {
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
@@ -18,7 +16,7 @@ const ProductCard = ({ id, name, text, img, price, color}) => {
     <Link to={`/filteredProducts/${type}/` + id}>
       <Card 
       onClick={() => dispatch(singleProduct(id))}
-      className=" rounded-2xl bg-white shadow-md flex flex-col">
+      className=" rounded-2xl bg-[#20718a] shadow-md flex flex-col mb-3">
         <img
           src={img}
           alt="card-image"
@@ -27,16 +25,16 @@ const ProductCard = ({ id, name, text, img, price, color}) => {
       {/* <CardHeader className="relative h-80 p-2 mb-2">
       </CardHeader> */}
       <CardBody className="py-3">
-        <Typography className="mb-1 text-xl font-bold text-gray-800">
+        <Typography className="mb-1 text-xl font-extrabold text-gray-900">
           {name}
         </Typography>
-        <Typography className="font-normal text-sm text-left text-slate-500 mb-2">
+        <Typography className="font-semibold text-sm text-left text-white mb-2">
           {text.slice(0,80)+"..."}
         </Typography>
         <hr />
       </CardBody>
       <CardFooter className="flex items-center justify-between p-3">
-         <Typography className="text-xl font-bold px-3 text-orange-300">
+         <Typography className="text-xl font-bold px-3 text-white">
           {price}$
         </Typography>
          <Typography className="flex">

@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import { ToastContainer } from "react-toastify";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const user = useSelector((state) => state.user.user);
@@ -19,7 +20,7 @@ function App() {
   };
   return (
     <>
-      <div className="App bg-cyan-600">
+      <div className="App bg-[#212222]">
         <BrowserRouter>
           <Routes>
             <Route
@@ -49,6 +50,7 @@ function App() {
                 <PrivateRoute authUser={authUser}>
                   <Navbar />
                   <FilteredProducts />
+                  <Footer />
                 </PrivateRoute>
               }
             />
@@ -57,7 +59,9 @@ function App() {
               element={
                 <PrivateRoute authUser={authUser}>
                   <ToastContainer position="top-right" className="mt-[70px]" />
-                  <SingleProduct />
+                  <Navbar />
+                  <SingleProduct/>
+                  <Footer />
                 </PrivateRoute>
               }
             />

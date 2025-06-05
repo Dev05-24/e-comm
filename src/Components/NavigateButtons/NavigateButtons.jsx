@@ -11,12 +11,13 @@ const NavigateButtons = () => {
 
   return (
     <div>
-      <div className='flex flex-wrap items-center justify-center gap-8 py-3'>
+      <div className='flex flex-wrap items-center justify-center gap-10 py-3 mt-10 mb-4'>
         {buttons.map((button, index) =>{
             return(
                 <div key={index}>
                   <Link to={"/filteredProducts/" + button}>
-                    <button onClick={() => dispatch(filterProducts(button))} className=' rounded-lg p-3 font-bold bg-yellow-400 text-sm hover:scale-110 duration-500 ease-in-out hover:bg-yellow-300 cursor-pointer'>{button}</button>
+                    <button onClick={() => dispatch(filterProducts(button))} className=' rounded-lg p-3 font-bold bg-[#20718a] text-white text-sm hover:scale-125 duration-300 ease-in-out cursor-pointer'
+                     >{button}</button>
                   </Link>
                 </div>
             )
@@ -24,7 +25,7 @@ const NavigateButtons = () => {
       </div>
       <hr className='w-[70%] ml-[15%] mb-4'/>
       {/* sales bar */}
-      <div className='w-[55%] text-yellow-400 text-4xl py-3 mx-auto text-center font-extrabold '>
+      <div className='w-[70%] text-white text-5xl py-3 mx-auto text-left font-extrabold '>
         <h3>SALES UP TO 50%</h3>
       </div>
         {/* clothes image */}

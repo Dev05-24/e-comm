@@ -30,15 +30,15 @@ const Cart = ({ openModal, setOpen }) => {
           onClick={() => setOpen(false)} // clicking outside modal closes it
         >
           <div
-            className="relative p-4 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-sm dark:bg-gray-700"
+            className="relative p-4 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-lg shadow-sm bg-[#212222]"
             onClick={stopPropagation} // stop closing when clicking inside modal
           >
             {/* Modal header */}
             <div className="flex items-center justify-between p-4 border-b rounded-t border-gray-200 dark:border-gray-600">
-              <h3 className="text-3xl font-bold text-yellow-500">
+              <h3 className="text-3xl font-bold text-[#20718a]">
                 Shopping Cart
               </h3>
-              <p className="text-xl font-bold text-yellow-500">
+              <p className="text-3xl font-bold text-[#20718a]">
                 Grand Total :{" "}
                 <span className="text-white font-semibold"> {totalPrice}$</span>
               </p>
@@ -68,16 +68,16 @@ const Cart = ({ openModal, setOpen }) => {
               {cart.map((item, index) => {
                 return (
                   <div key={index} className="w-full">
-                    <div className="flex flex-col md:flex-row justify-around px-2 py-4">
+                    <div className="flex flex-col md:flex-row justify-between px-2 py-4">
                       <div className="p-2 flex items-start gap-2">
                         <img
                           src={item.img}
                           alt={item.name}
-                          className="h-[160px] w-[125px] object-cover rounded-2xl"
+                          className="h-[160px] w-[130px] object-cover rounded-2xl"
                         />
-                        <div>
+                        <div className="ml-3">
                           <div className="flex flex-col items-start">
-                            <h4 className="text-xl text-yellow-500 font-bold">
+                            <h4 className="text-2xl text-[#20718a] font-bold mb-2">
                               {item.name}
                             </h4>
                           </div>
@@ -86,7 +86,7 @@ const Cart = ({ openModal, setOpen }) => {
                           </div>
                         </div>
                       </div>
-                      <div className="p-2 flex flex-col items-start justify-around text-yellow-500">
+                      <div className="p-2 flex flex-col items-start justify-around text-[#20718a]">
                         <p className="font-bold">
                           Selected Size :{" "}
                           <span className="text-sm text-white font-semibold">
@@ -122,7 +122,7 @@ const Cart = ({ openModal, setOpen }) => {
                           <Tooltip>
                             <Button
                               onClick={() => dispatch(removeFromCart(item))}
-                              className="text-white text-sm bg-yellow-600 p-2 mt-3 font-bold cursor-pointer hover:bg-yellow-500 hover:scale-105 duration-300 ease-in-out"
+                              className="text-white text-sm bg-[#20718a] p-2 mt-3 font-semibold cursor-pointer hover:scale-110 duration-300 ease-in-out"
                             >
                               Remove
                             </Button>
@@ -150,7 +150,7 @@ const Cart = ({ openModal, setOpen }) => {
           >
             {/* Modal header */}
             <div className="flex items-center justify-between p-4 border-b rounded-t border-gray-200 dark:border-gray-600">
-              <h3 className="text-3xl font-bold text-yellow-500">
+              <h3 className="text-3xl font-bold text-[#20718a]">
                 Shopping Cart
               </h3>
               <button

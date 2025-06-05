@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logo.png";
-import logo2 from "../../assets/images/logo.avif";
-import logo3 from "../../assets/images/logo.png";
+import defaultLogo from "../../assets/images/default_user.jpg";
 import Cart from "../Cart/Cart";
 import { useSelector, useDispatch } from "react-redux";
 import { Avatar } from "@material-tailwind/react";
@@ -21,15 +20,15 @@ const Navbar = () => {
   return (
     <>
       {/* div for image and button for login wish list and shopping cart */}
-      <div className="flex flex-col md:flex-row justify-around items-center bg-white px-4">
+      <div className="flex flex-col md:flex-row justify-around items-center px-4" >
         {/* for image */}
         <div className="flex items-center gap-3">
           <Link to="/">
-          <img src={logo3} alt="E-store logo" className="h-20" />
+          <img src={logo} alt="E-store logo" className="h-20" />
             {/* <h1 className="text-xl font-bold">Home</h1> */}
           </Link>
         </div>
-        {/* for login wish list and shopping cart */}
+        {/* for login and shopping cart */}
         <div className="flex items-center gap-5">
           <div className="flex gap-4">
             {/* shopping cart */}
@@ -47,7 +46,7 @@ const Navbar = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="2"
-                  stroke="#000"
+                  stroke="#20718a"
                   className="size-6"
                 >
                   <path
@@ -57,7 +56,7 @@ const Navbar = () => {
                   />
                 </svg>
               )}
-              <p className="text-lg font-bold ml-2">Bag</p>
+              <p className="text-lg font-bold ml-2 text-[#20718a]">Bag</p>
               <div>
                 {open && <Cart openModal={open} setOpen={setOpen}></Cart>}
               </div>
@@ -65,14 +64,12 @@ const Navbar = () => {
           </div>
           {/* user logo */}
           <div className="flex flex-row items-center cursor-pointer pl-4">
-            {image && (
               <Avatar
-                src={image}
+                src={image || defaultLogo}
                 alt="Avatar"
                 size="sm"
-                className="mr-2 h-16 w-16 rounded-full"
+                className="mr-2 h-10 w-10 rounded-full object-cover"
               ></Avatar>
-            )}
             <div onClick={() => dispatch(logout())}>
               <Tooltip
                 content="Click to sign out"
@@ -81,9 +78,9 @@ const Navbar = () => {
                   mount: { scale: 1, y: 0 },
                   unmount: { scale: 0, y: 25 },
                 }}
-                 className="bg-yellow-600 text-white ml-2 px-4 py-2 rounded-lg shadow-lg"
+                 className="bg-[#20718a] text-white ml-2 px-4 py-2 rounded-lg shadow-lg"
               >
-                <p className="font-bold text-lg">
+                <p className="font-bold text-lg text-[#20718a]">
                   {name.charAt("0").toUpperCase() + name.slice(1)}
                 </p>
               </Tooltip>

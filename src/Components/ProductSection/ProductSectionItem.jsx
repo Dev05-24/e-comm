@@ -27,29 +27,29 @@ const ProductSectionItem = ({
   const defaultColor = color[0];
   return (
     <div>
-      <Card className="w-80 h-[500px] bg-white p-2">
+      <Card className="w-80 h-[470px] bg-[#20718a] p-2 text-white shadow-md">
         <CardHeader floated={false} className="w-full rounded-2xl">
           <img
             src={img}
             alt={name}
-            className="h-[250px] w-full object-cover rounded-2xl"
+            className="h-[200px] w-full object-cover rounded-2xl shadow-xl"
           />
         </CardHeader>
         <CardBody className="text-left">
-          <Typography variant="h4" className="mb-2 text-black font-bold">
+          <Typography variant="h4" className="mb-3 text-white font-extrabold">
             {name}
           </Typography>
-          <Typography color="blue-gray" className="font-medium text-sm" textGradient>
+          <Typography color="" className="font-medium text-white text-sm mb-2" textGradient>
             {text.slice(0,100)}...
           </Typography>
-          <div className="flex justify-between items-center pt-2">
-            <Typography color="blue-gray" className="font-bold" textGradient>
-              Size left : <span className="text-sm">{defaultSize}</span>
+          <div className="flex justify-between items-center pt-3">
+            <Typography color="blue-gray" className="font-extrabold text-lg text-black" textGradient>
+              Size left : <span className="text-white">{defaultSize}</span>
             </Typography>
-            <Typography color="blue-gray" className="font-bold" textGradient>
+            <Typography color="blue-gray" className="font-extrabold text-lg text-black" textGradient>
               Color :{" "}
               <span
-                className="px-3 rounded-full ml-3 mt-2"
+                className="px-3 rounded-lg ml-3"
                 style={{ backgroundColor: defaultColor }}
               ></span>
             </Typography>
@@ -75,7 +75,7 @@ const ProductSectionItem = ({
                 toast.success(`${name} added to cart`);
               }}
               ripple={true}
-              className="p-2 bg-yellow-400 cursor-pointer hover:scale-110 duration-200 ease-in-out"
+              className="p-2 bg-[#212222] text-white cursor-pointer hover:scale-110 duration-400 ease-in-out hover:bg-[#141414] text-sm"
             >
               Add to Cart
             </Button>

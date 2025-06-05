@@ -42,7 +42,7 @@ const SingleProduct = () => {
   if (!product) return <p className="text-center text-white">Product not found</p>;
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen gap-10 p-4">
+    <div className="flex flex-col justify-center items-center min-h-screen gap-10 p-4 mb-4">
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         <img
           className="h-[250px] w-[300px] object-cover md:w-auto md:h-[450px] rounded-lg"
@@ -50,9 +50,9 @@ const SingleProduct = () => {
           alt={product.name}
         />
 
-        <div className="mx-5 bg-white/10 backdrop-blur-md text-white p-6 rounded-xl shadow-lg max-w-lg">
-          <h3 className="text-lg md:text-2xl font-bold pb-3">{product.name}</h3>
-          <p className="text-xl font-semibold text-orange-400 pb-3">15% OFF</p>
+        <div className="mx-5 bg-[#20718a] backdrop-blur-md text-white p-6 rounded-xl shadow-lg max-w-lg flex flex-col">
+          <h3 className="text-lg md:text-2xl font-extrabold pb-3 text-[#212222]">{product.name}</h3>
+          <p className="text-xl font-bold  pb-3">15% OFF</p>
           <p className="md:text-lg pb-3">{product.text}</p>
 
           {/* Size Picker */}
@@ -68,7 +68,7 @@ const SingleProduct = () => {
               name="size"
               value={size}
               onChange={(e) => setSize(e.target.value)}
-              className="w-full p-2.5 rounded-lg dark:bg-gray-700 dark:border-gray-600 text-sm"
+              className="w-full p-2.5 rounded-lg bg-[#212222] dark:border-gray-600 text-sm"
             >
               {product.size.map((sz, index) => (
                 <option key={index} value={sz}>
@@ -91,7 +91,7 @@ const SingleProduct = () => {
               name="color"
               value={color}
               onChange={(e) => setColor(e.target.value)}
-              className="w-full p-2.5 rounded-lg dark:bg-gray-700 dark:border-gray-600 text-sm"
+              className="w-full p-2.5 rounded-lg bg-[#212222] dark:border-gray-600 text-sm"
             >
               {product.color.map((clr, index) => (
                 <option key={index} value={clr}>
@@ -104,7 +104,7 @@ const SingleProduct = () => {
           {/* Add to Cart Button */}
           <Tooltip>
             <Button
-              className="w-full bg-yellow-600 hover:scale-105 transition-transform duration-300"
+              className="w-[50%] mx-auto bg-[#212222] hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer"
               onClick={handleAddToCart}
             >
               Add to cart
@@ -114,8 +114,8 @@ const SingleProduct = () => {
       </div>
 
       {/* Cart Icon / Bag Button */}
-      <div
-        className="flex flex-row items-center cursor-pointer bg-yellow-600 px-4 py-2 rounded-2xl"
+      {/* <div
+        className="flex flex-row items-center cursor-pointer bg-[#20718a] px-4 py-2 rounded-2xl"
         onClick={() => setOpen(true)}
       >
         {totalAmount > 0 ? (
@@ -137,7 +137,7 @@ const SingleProduct = () => {
           </svg>
         )}
         <p className="text-lg font-bold ml-2">Bag</p>
-      </div>
+      </div> */}
 
       {/* Cart Modal */}
       {open && <Cart openModal={open} setOpen={setOpen} />}

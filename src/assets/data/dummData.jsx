@@ -65,27 +65,32 @@ import suit5 from "../images/suit5.jpg";
 import suit6 from "../images/suit6.jpg";
 import suit7 from "../images/suit7.jpg";
 import suit8 from "../images/suit8.jpg";
+import slider1 from "../images/slider-1.jpeg";
+import slider2 from "../images/slider-2.jpg";
+import slider3 from "../images/slider-3.jpg";
+import slider4 from "../images/slider-4.jpg";
+import slider5 from "../images/slider-5.avif";
 
 export const sliderData = [
   {
     id: "0",
-    img: shoe1,
+    img: slider5,
     text: "Summers SALE up to 50% OFF what are you wating for",
   },
   {
     id: "1",
-    img: shoe2,
+    img: slider2,
     text: "AUTUMN is coming, choose what suits you THE BEST",
   },
   {
     id: "2",
-    img: shoe3,
-    text: "Make your feet as comfortable as walking on the beach",
+    img: slider3,
+    text: "Whether it's the boardroom or the big day, we’ve got your perfect fit.",
   },
   {
     id: "3",
-    img: shoe4,
-    text: "Choose between basketball and fashion or choose both",
+    img: slider4,
+    text: "Fashion-forward bags that complete your look.",
   },
 ];
 
@@ -97,7 +102,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "T-Shirts",
     size: ["XL", "L", "M", "S"],
-    color: ["black", "gray", "green"],
+    color: ["orange", "red", "green"],
     gender: "male",
     price: 45,
   },

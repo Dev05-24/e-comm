@@ -21,15 +21,15 @@ const Login = () => {
     setValues({ ...values, [name]: value });
   };
   return (
-    <div className="flex h-screen justify-center items-center bg-gray-100">
-      <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <form className="space-y-6" onSubmit={handleSubmit} autoComplete="off">
+    <div className="flex h-screen justify-center items-center bg-[#212222]">
+      <div className="w-full max-w-sm p- border border-gray-200 rounded-4xl shadow-md sm:p-6 md:p-8 dark:border-gray-700 bg-[#20718a]">
+        <form className="space-y-6 flex flex-col font-semibold" onSubmit={handleSubmit} autoComplete="off">
           {/* Autofill traps */}
           <input type="text" name="fakeuser" style={{ display: "none" }} />
           <input type="password" name="fakepass" style={{ display: "none" }} />
 
-          <h5 className="text-2xl text-center font-medium text-gray-900 dark:text-white">
-            Sign in
+          <h5 className="text-3xl text-center font-extrabold text-gray-900">
+            User Login
           </h5>
 
           <div>
@@ -72,12 +72,12 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="w-[50%] mx-auto text-white bg-[#212222] hover:scale-110 duration-300 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer"
           >
             Sign In
           </button>
 
-          <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+          <div className="text-lg font-bold text-gray-800 text-center">
             Image is optional
           </div>
         </form>
