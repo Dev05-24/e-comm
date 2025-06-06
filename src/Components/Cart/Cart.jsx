@@ -2,6 +2,7 @@ import { Button, Tooltip } from "@material-tailwind/react";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../features/slices/cartSlice";
+import { toast } from "react-toastify";
 
 const Cart = ({ openModal, setOpen }) => {
   if (!openModal) return null; // don't render if modal is closed
@@ -121,7 +122,9 @@ const Cart = ({ openModal, setOpen }) => {
                         <div>
                           <Tooltip>
                             <Button
-                              onClick={() => dispatch(removeFromCart(item))}
+                              onClick={() => { dispatch(removeFromCart(item))
+                                toast.error(`${item.name} removed from cart!`);
+                              }}
                               className="text-white text-sm bg-[#20718a] p-2 mt-3 font-semibold cursor-pointer hover:scale-110 duration-300 ease-in-out"
                             >
                               Remove

@@ -18,49 +18,50 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-125 duration-300 ease-in-out"
+            className=""
+            
           >
-            <FaInstagram className="hover:text-accent transition" />
+            <FaInstagram className="transition hover:scale-125 duration-300 ease-in-out" />
           </a>
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-125 duration-300 ease-in-out"
+            className=""
           >
-            <FaFacebookF className="hover:text-accent transition" />
+            <FaFacebookF className="transition hover:scale-125 duration-300 ease-in-out" />
           </a>
           <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-125 duration-300 ease-in-out"
+            className=""
           >
-            <FaTwitter className="hover:text-accent transition" />
+            <FaTwitter className="transition hover:scale-125 duration-300 ease-in-out" />
           </a>
           <a
             href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-125 duration-300 ease-in-out"
+            className=""
           >
-            <FaYoutube className="hover:text-accent transition" />
+            <FaYoutube className="transition hover:scale-125 duration-300 ease-in-out" />
           </a>
           <a
             href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-125 duration-300 ease-in-out"
+            className=""
           >
-            <FaWhatsapp className="hover:text-accent transition" />
+            <FaWhatsapp className="transition hover:scale-125 duration-300 ease-in-out" />
           </a>
           <a
             href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:scale-125 duration-300 ease-in-out"
+            className=""
           >
-            <FaPinterestP className="hover:text-accent transition" />
+            <FaPinterestP className="transition hover:scale-125 duration-300 ease-in-out" />
           </a>
         </div>
       </div>

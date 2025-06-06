@@ -13,7 +13,7 @@ const Slider = () => {
 
   return (
     <div className='relative pb-4'>
-      <div>
+      <div className=''>
         {sliderData.map((item) => {
           return(
             <div key={item.id} className={parseInt(item.id) === slideIndex ? "opacity-100 duration-700 ease-in-out scale-100" : "opacity-0 duration-700 ease-in-out scale-95"}>
@@ -22,32 +22,32 @@ const Slider = () => {
                   <img src={item.img} alt="" className='h-[600px] w-full object-contain'/>
                 )}          
               </div>
-              <div className='absolute inset-x-2/4 left-20 top-40'>
-                <p className='text-white font-inter text-6xl text-left font-bold'>{parseInt(item.id) === slideIndex && item.text}</p>
+              <div className='absolute inset-x-1/5 lg:inset-x-2/5 lg:left-40 top-55 lg:top-40'>
+                <p className='text-white font-inter text-xl sm:text-4xl md:text-5xl lg:text-6xl text-left font-bold'>{parseInt(item.id) === slideIndex && item.text}</p>
               </div>
             </div>
           )
         })}
       </div>
       {/* for dot */}
-      <div className='flex absolute bottom-14 gap-3 left-[45%]'>
+      <div className='flex absolute bottom-56 md:bottom-27 lg:bottom-14 gap-3 left-[40%] md:left-[45%]'>
         {sliderData.map((dot, index) => {
           return(
-            <div key={dot.id} className={index === slideIndex ? "bg-black rounded-2xl p-3 cursor-pointer" : "bg-white rounded-2xl p-3 cursor-pointer"} 
+            <div key={dot.id} className={index === slideIndex ? "bg-[#20718a] rounded-2xl p-2 md:p-3 cursor-pointer" : "bg-white rounded-2xl p-2 md:p-3 cursor-pointer"} 
             onClick={() => dispatch(dotSlide(index))}></div>
           )
         })}
       </div>
       {/* when this button got click then the dispatch hook will dispatch these reducer function and logic inside the slice got executed */}
       <div>
-        <button className='absolute bg-white top-[50%] right-4 rounded-full p-2 hover:bg-[#20718a] cursor-pointer' onClick={() => dispatch(nextSlide(slideIndex + 1))}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+        <button className='absolute bg-white top-[50%] right-4 rounded-full p-2 hover:bg-[#20718a] cursor-pointer hover:scale-125 duration-300 ease-in-out' onClick={() => dispatch(nextSlide(slideIndex + 1))}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="size-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
           </svg>
         </button>
 
-        <button className='absolute bg-white top-[50%] left-4 rounded-full p-2 hover:bg-[#20718a] cursor-pointer' onClick={() => dispatch(prevSlide(slideIndex - 1))}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+        <button className='absolute bg-white top-[50%] left-4 rounded-full p-2 hover:bg-[#20718a] cursor-pointer hover:scale-125 duration-300 ease-in-out font-bold' onClick={() => dispatch(prevSlide(slideIndex - 1))}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="size-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
         </button>

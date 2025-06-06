@@ -27,26 +27,24 @@ const ProductSectionItem = ({
   const defaultColor = color[0];
   return (
     <div>
-      <Card className="w-80 h-[470px] bg-[#20718a] p-2 text-white shadow-md">
-        <CardHeader floated={false} className="w-full rounded-2xl">
+      <Card className="w-80 bg-[#20718] text-white p-2 rounded-2xl" style={{ boxShadow: '0 0 18px 1px #1e9ac0' }}>
+        <div className="flex flex-col gap-3">
+        <CardHeader floated={false} className="w-full p-0 m-0 bg-[#212222]">
           <img
             src={img}
             alt={name}
-            className="h-[200px] w-full object-cover rounded-2xl shadow-xl"
+            className="h-[200px] w-full rounded-2xl object-cover shadow-xl"
           />
         </CardHeader>
-        <CardBody className="text-left">
-          <Typography variant="h4" className="mb-3 text-white font-extrabold">
+        <CardBody className="text-left flex flex-col">
+          <Typography variant="h4" className="mb-3 font-extrabold">
             {name}
           </Typography>
-          <Typography color="" className="font-medium text-white text-sm mb-2" textGradient>
-            {text.slice(0,100)}...
-          </Typography>
           <div className="flex justify-between items-center pt-3">
-            <Typography color="blue-gray" className="font-extrabold text-lg text-black" textGradient>
+            <Typography color="blue-gray" className="font-extrabold text-lg" textGradient>
               Size left : <span className="text-white">{defaultSize}</span>
             </Typography>
-            <Typography color="blue-gray" className="font-extrabold text-lg text-black" textGradient>
+            <Typography color="blue-gray" className="font-extrabold text-lg" textGradient>
               Color :{" "}
               <span
                 className="px-3 rounded-lg ml-3"
@@ -75,12 +73,13 @@ const ProductSectionItem = ({
                 toast.success(`${name} added to cart`);
               }}
               ripple={true}
-              className="p-2 bg-[#212222] text-white cursor-pointer hover:scale-110 duration-400 ease-in-out hover:bg-[#141414] text-sm"
+              className="px-3 bg-[#1e9ac0] cursor-pointer hover:scale-115 duration-400 ease-in-out text-sm font-extrabold"
             >
               Add to Cart
             </Button>
           </Tooltip>
         </CardFooter>
+        </div>
       </Card>
     </div>
   );

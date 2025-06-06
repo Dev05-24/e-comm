@@ -16,16 +16,15 @@ const ProductCard = ({ id, name, text, img, price, color}) => {
     <Link to={`/filteredProducts/${type}/` + id}>
       <Card 
       onClick={() => dispatch(singleProduct(id))}
-      className=" rounded-2xl bg-[#20718a] shadow-md flex flex-col mb-3">
+      style={{ boxShadow: '0 0 20px 1px white' }}
+      className="rounded-2xl bg-[#20718a] shadow-md flex flex-col mb-10 hover:scale-105 duration-200 ease-in-out">
         <img
           src={img}
           alt="card-image"
           className="h-55 w-full object-cover rounded-t-2xl"
         />
-      {/* <CardHeader className="relative h-80 p-2 mb-2">
-      </CardHeader> */}
       <CardBody className="py-3">
-        <Typography className="mb-1 text-xl font-extrabold text-gray-900">
+        <Typography className="mb-2 text-2xl font-extrabold text-gray-900">
           {name}
         </Typography>
         <Typography className="font-semibold text-sm text-left text-white mb-2">

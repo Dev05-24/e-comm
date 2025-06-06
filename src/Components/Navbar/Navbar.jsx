@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <>
       {/* div for image and button for login wish list and shopping cart */}
-      <div className="flex flex-col md:flex-row justify-around items-center px-4" >
+      <div className="flex flex-col md:flex-row justify-around items-center px-4 gap-5 sm:gap-0">
         {/* for image */}
         <div className="flex items-center gap-3">
           <Link to="/">

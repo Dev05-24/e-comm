@@ -6,8 +6,8 @@ const ProductSection = () => {
   return (
     <>
     <div>
-      <div className='p-2 w-[50%] mx-auto rounded-md'>
-        <h3 className='text-white text-center text-2xl transition ease-in-out duration-200 sm:text-2xl md:text-3xl lg:text-5xl m-4 font-extrabold'>SUMMER T-Shirt SALE 30%</h3>
+      <div className='p-2 w-[50%] sm:w-[40%] mx-auto rounded-md'>
+        <h3 className='text-white text-center transition ease-in-out duration-200 text-3xl md:text-4xl lg:text-5xl mt-10 font-extrabold'>SUMMER T-Shirt SALE 30%</h3>
       </div>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto gap-10 py-12 max-w-6xl'>
         {storeData.slice(0,6).map((product, index) => {
