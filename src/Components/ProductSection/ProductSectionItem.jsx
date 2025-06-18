@@ -27,13 +27,13 @@ const ProductSectionItem = ({
   const defaultColor = color[0];
   return (
     <div>
-      <Card className="w-80 bg-[#20718] text-white p-2 rounded-2xl" style={{ boxShadow: '0 0 18px 1px #1e9ac0' }}>
+      <div className="w-80 bg-[#a8b7bd] p-2">
         <div className="flex flex-col gap-3">
-        <CardHeader floated={false} className="w-full p-0 m-0 bg-[#212222]">
+        <CardHeader floated={false} className="w-full p-0 m-0">
           <img
             src={img}
             alt={name}
-            className="h-[200px] w-full rounded-2xl object-cover shadow-xl"
+            className="h-[200px] w-full object-cover shadow-xl"
           />
         </CardHeader>
         <CardBody className="text-left flex flex-col">
@@ -42,7 +42,7 @@ const ProductSectionItem = ({
           </Typography>
           <div className="flex justify-between items-center pt-3">
             <Typography color="blue-gray" className="font-extrabold text-lg" textGradient>
-              Size left : <span className="text-white">{defaultSize}</span>
+              Size left : <span className="font-bold">{defaultSize}</span>
             </Typography>
             <Typography color="blue-gray" className="font-extrabold text-lg" textGradient>
               Color :{" "}
@@ -73,14 +73,14 @@ const ProductSectionItem = ({
                 toast.success(`${name} added to cart`);
               }}
               ripple={true}
-              className="px-3 bg-[#1e9ac0] cursor-pointer hover:scale-115 duration-400 ease-in-out text-sm font-extrabold"
+              className="px-3 bg-[#1e9ac0] cursor-pointer transition transform hover:scale-110 duration-300 ease-in-out font-bold"
             >
               Add to Cart
             </Button>
           </Tooltip>
         </CardFooter>
         </div>
-      </Card>
+      </div>
     </div>
   );
 };

@@ -68,13 +68,18 @@ import suit8 from "../images/suit8.jpg";
 import slider1 from "../images/slider-1.jpeg";
 import slider2 from "../images/slider-2.jpg";
 import slider3 from "../images/slider-3.jpg";
-import slider4 from "../images/slider-4.jpg";
-import slider5 from "../images/slider-5.avif";
+import slider4 from "../images/slider-4.webp";
+import product1 from "../images/prod-1.webp";
+import product2 from "../images/prod-2.avif";
+import product3 from "../images/prod-3.jpg";
+import product4 from "../images/prod-4.webp";
+import product5 from "../images/prod-5.avif";
+import product6 from "../images/prod-6.jpg";
 
 export const sliderData = [
   {
     id: "0",
-    img: slider5,
+    img: slider1,
     text: "Summers SALE up to 50% OFF what are you wating for grab the deal now...",
   },
   {
@@ -94,6 +99,75 @@ export const sliderData = [
   },
 ];
 
+export const productData =[
+  {
+    id: "1",
+    img: product1,
+    name: "T-Shirts",
+    text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+    type: "T-Shirts",
+    size: ["XL", "L", "M", "S"],
+    color: ["red", "orange", "green"],
+    gender: "female",
+    price: 20,
+  },
+  {
+    id: "2",
+    img: product2,
+    name: "Hooodie",
+    text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+    type: "Hooodie",
+    size: ["M", "L", "XL"],
+    color: ["black", "red", "brown"],
+    gender: "male",
+    price: 55,
+  },
+  {
+    id: "3",
+    img: product3,
+    name: "Shoes",
+    text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+    type: "Shoes",
+    size: ["L", "XL"],
+    color: ["brown", "gray", "yellow"],
+    gender: "female",
+    price: 75,
+  },
+  {
+    id: "4",
+    img: product4,
+    name: "Jeans",
+    text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+    type: "Jeans",
+    size: ["M", "L", "XL"],
+    color: ["cyan", "orange", "blue"],
+    gender: "female",
+    price: 25,
+  },
+  {
+    id: "5",
+    img: product5,
+    name: "Bags",
+    text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+    type: "Bags",
+    size: ["M", "L", "XL"],
+    color: ["pink", "brown", "blue"],
+    gender: "female",
+    price: 15,
+  },
+  {
+    id: "6",
+    img: product6,
+    name: "Suits",
+    text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+    type: "Suits",
+    size: ["M", "L", "XL"],
+    color: ["gray", "purple", "yellow"],
+    gender: "female",
+    price: 25,
+  },
+]
+
 export const storeData = [
   {
     id: "1",
@@ -109,7 +183,7 @@ export const storeData = [
   {
     id: "2",
     img: shirt2,
-    name: "Casual T-Shrit 2",
+    name: "Casual T-Shirt 2",
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "T-Shirts",
     size: ["M", "L", "XL"],
@@ -120,7 +194,7 @@ export const storeData = [
   {
     id: "3",
     img: shirt3,
-    name: "Casual T-Shrit 3",
+    name: "Casual T-Shirt 3",
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "T-Shirts",
     size: ["L", "XL"],
@@ -131,18 +205,18 @@ export const storeData = [
   {
     id: "4",
     img: shirt4,
-    name: "Casual T-Shrit 4",
+    name: "Casual T-Shirt 4",
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "T-Shirts",
     size: ["M", "L", "XL"],
-    color: ["gray", "orange", "blue"],
+    color: ["red", "orange", "blue"],
     gender: "female",
     price: 25,
   },
   {
     id: "5",
     img: shirt5,
-    name: "Casual T-Shrit 5",
+    name: "Casual T-Shirt 5",
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "T-Shirts",
     size: ["M", "L", "XL"],
@@ -153,7 +227,7 @@ export const storeData = [
   {
     id: "6",
     img: shirt6,
-    name: "Casual T-Shrit 6",
+    name: "Casual T-Shirt 6",
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "T-Shirts",
     size: ["M", "L", "XL"],
@@ -164,7 +238,7 @@ export const storeData = [
   {
     id: "7",
     img: shirt7,
-    name: "Casual T-Shrit 7",
+    name: "Casual T-Shirt 7",
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "T-Shirts",
     size: ["M", "L", "XL"],
@@ -175,7 +249,7 @@ export const storeData = [
   {
     id: "8",
     img: shirt8,
-    name: "Casual T-Shrit 8",
+    name: "Casual T-Shirt 8",
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "T-Shirts",
     size: ["M", "XL"],

@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer'
 
 const Main = () => {
   return (
-    <div>
+    <div id='main'>
         <Navbar></Navbar>
         <Slider></Slider>
         <NavigateButtons></NavigateButtons>

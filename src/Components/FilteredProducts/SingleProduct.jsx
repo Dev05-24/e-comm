@@ -5,6 +5,9 @@ import { Tooltip, Button } from "@material-tailwind/react";
 import { addToCart } from "../../features/slices/cartSlice";
 import { toast } from "react-toastify";
 import Cart from "../Cart/Cart";
+import { productData } from '../../assets/data/dummData'
+import ProductSectionItem from '../ProductSection/ProductSectionItem'
+import ProductSection from "../ProductSection/ProductSection";
 
 const SingleProduct = () => {
   const allProducts = useSelector((state) => state.products.singleProduct);
@@ -42,7 +45,7 @@ const SingleProduct = () => {
   if (!product) return <p className="text-center text-white">Product not found</p>;
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen gap-10 p-4 mb-4">
+    <div className="flex flex-col justify-center items-center min-h-screen gap-10 py-30 mb-4">
       <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         <img
           className="h-[250px] w-[300px] object-cover md:w-auto md:h-[450px] rounded-lg"
@@ -50,10 +53,10 @@ const SingleProduct = () => {
           alt={product.name}
         />
 
-        <div className="mx-5 bg-[#20718a] backdrop-blur-md text-white p-6 rounded-xl shadow-lg max-w-lg flex flex-col">
+        <div className="mx-5 bg-white backdrop-blur-md text-white p-6 rounded-xl shadow-lg max-w-lg flex flex-col">
           <h3 className="text-lg md:text-2xl font-extrabold pb-3 text-[#212222]">{product.name}</h3>
-          <p className="text-xl font-bold  pb-3">15% OFF</p>
-          <p className="md:text-lg pb-3">{product.text}</p>
+          <p className="text-xl font-bold text-black  pb-3">15% OFF</p>
+          <p className="md:text-lg pb-3 text-black">{product.text}</p>
 
           {/* Size Picker */}
           <div className="pb-4">
@@ -112,32 +115,7 @@ const SingleProduct = () => {
           </Tooltip>
         </div>
       </div>
-
-      {/* Cart Icon / Bag Button */}
-      {/* <div
-        className="flex flex-row items-center cursor-pointer bg-[#20718a] px-4 py-2 rounded-2xl"
-        onClick={() => setOpen(true)}
-      >
-        {totalAmount > 0 ? (
-          <span className="rounded-full bg-gray-300 px-2 text-sm mr-2">{totalAmount}</span>
-        ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="#000"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-            />
-          </svg>
-        )}
-        <p className="text-lg font-bold ml-2">Bag</p>
-      </div> */}
+      <ProductSection />
 
       {/* Cart Modal */}
       {open && <Cart openModal={open} setOpen={setOpen} />}

@@ -7,6 +7,7 @@ import { Avatar } from "@material-tailwind/react";
 import { Tooltip, Button } from "@material-tailwind/react";
 import { logout } from "../../features/slices/authSlice";
 import { Link, useNavigate } from "react-router-dom";
+import Main from "../Main/Main";
 
 const Navbar = () => {
   const totalAmount = useSelector((state) => state.cart.totalAmount);
@@ -19,18 +20,21 @@ const Navbar = () => {
   const dispatch = useDispatch();
   return (
     <>
+    <div className="fixed top-0 left-0 z-50 bg-[#222222] w-full shadow-md">
       {/* div for image and button for login wish list and shopping cart */}
-      <div className="flex flex-col md:flex-row justify-around items-center px-4 gap-5 sm:gap-0">
+      <div className="flex flex-col md:flex-row justify-evenly items-center px-4 gap-5 sm:gap-0">
         {/* for image */}
         <div className="flex items-center gap-3">
           <Link to="/">
-          <img src={logo} alt="E-store logo" className="h-20" />
+          <img src={logo} alt="E-store logo" className="h-15" />
             {/* <h1 className="text-xl font-bold">Home</h1> */}
           </Link>
         </div>
-        {/* for login and shopping cart */}
-        <div className="flex items-center gap-5">
-          <div className="flex gap-4">
+        <div className="flex gap-6">
+        <div>
+          <a href="#product-section" className="text-xl font-bold text-white">Product</a>
+        </div>
+        <div className="flex gap-4">
             {/* shopping cart */}
             <div
               className="flex flex-row items-center cursor-pointer"
@@ -56,21 +60,25 @@ const Navbar = () => {
                   />
                 </svg>
               )}
-              <p className="text-lg font-bold ml-2 text-[#20718a]">Bag</p>
+              <p className="text-lg font-bold ml-2 text-white">Bag</p>
               <div>
                 {open && <Cart openModal={open} setOpen={setOpen}></Cart>}
               </div>
             </div>
           </div>
+        </div>
+        {/* for login and shopping cart */}
+        <div className="flex items-center gap-5">
+          
           {/* user logo */}
           <div className="flex flex-row items-center cursor-pointer pl-4">
               <Avatar
                 src={image || defaultLogo}
                 alt="Avatar"
                 size="sm"
-                className="mr-2 h-10 w-10 rounded-full object-cover"
+                className="mr-2 h-9 w-10 rounded-full object-cover"
               ></Avatar>
-            <div onClick={() => dispatch(logout())}>
+            <div onClick={() => dispatch(logout())} className="z-60">
               <Tooltip
                 content="Click to sign out"
                 placement="right"
@@ -78,15 +86,16 @@ const Navbar = () => {
                   mount: { scale: 1, y: 0 },
                   unmount: { scale: 0, y: 25 },
                 }}
-                 className="bg-[#20718a] text-white ml-2 px-4 py-2 rounded-lg shadow-lg"
+                 className="bg-[#20718a] text-white ml-2 px-4 py-2 rounded-lg shadow-lg z-60"
               >
-                <p className="font-bold text-lg text-[#20718a]">
+                <p className="font-bold text-lg text-white">
                   {name.charAt("0").toUpperCase() + name.slice(1)}
                 </p>
               </Tooltip>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

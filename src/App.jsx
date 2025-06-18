@@ -37,7 +37,7 @@ function App() {
                       pauseOnHover
                       draggable
                     />
-                    <Main></Main>
+                    <Main className="mt-20"></Main>
                   </>
                 ) : (
                   <Login></Login>

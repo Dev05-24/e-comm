@@ -19,7 +19,7 @@ const Slider = () => {
             <div key={item.id} className={parseInt(item.id) === slideIndex ? "opacity-100 duration-700 ease-in-out scale-100" : "opacity-0 duration-700 ease-in-out scale-95"}>
               <div>
                 {parseInt(item.id) === slideIndex && (
-                  <img src={item.img} alt="" className='h-[600px] w-full object-contain'/>
+                  <img src={item.img} alt="" className='h-[600px] w-[60%] mx-auto pt-20 object-cover rounded-2xl'/>
                 )}          
               </div>
               <div className='absolute inset-x-1/5 lg:inset-x-2/5 lg:left-40 top-55 lg:top-40'>

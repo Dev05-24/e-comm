@@ -16,8 +16,8 @@ const ProductCard = ({ id, name, text, img, price, color}) => {
     <Link to={`/filteredProducts/${type}/` + id}>
       <Card 
       onClick={() => dispatch(singleProduct(id))}
-      style={{ boxShadow: '0 0 20px 1px white' }}
-      className="rounded-2xl bg-[#20718a] shadow-md flex flex-col mb-10 hover:scale-105 duration-200 ease-in-out">
+      // style={{ boxShadow: '0 0 20px 1px white' }}
+      className="rounded-2xl bg-white shadow-md flex flex-col mb-10 transition transform hover:scale-105 duration-200 ease-in-out p-2">
         <img
           src={img}
           alt="card-image"
@@ -27,13 +27,13 @@ const ProductCard = ({ id, name, text, img, price, color}) => {
         <Typography className="mb-2 text-2xl font-extrabold text-gray-900">
           {name}
         </Typography>
-        <Typography className="font-semibold text-sm text-left text-white mb-2">
+        <Typography className="font-semibold text-sm text-left mb-2">
           {text.slice(0,80)+"..."}
         </Typography>
         <hr />
       </CardBody>
       <CardFooter className="flex items-center justify-between p-3">
-         <Typography className="text-xl font-bold px-3 text-white">
+         <Typography className="text-xl font-bold px-3">
           {price}$
         </Typography>
          <Typography className="flex">
