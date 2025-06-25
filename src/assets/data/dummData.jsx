@@ -65,12 +65,12 @@ import suit5 from "../images/suit5.jpg";
 import suit6 from "../images/suit6.jpg";
 import suit7 from "../images/suit7.jpg";
 import suit8 from "../images/suit8.jpg";
-import slider1 from "../images/slider-1.jpeg";
+import slider1 from "../images/slider-1.avif";
 import slider2 from "../images/slider-2.jpg";
-import slider3 from "../images/slider-3.jpg";
+import slider3 from "../images/clothes.jpg";
 import slider4 from "../images/slider-4.webp";
 import product1 from "../images/prod-1.webp";
-import product2 from "../images/prod-2.avif";
+// import product2 from "../images/prod-2.avif";
 import product3 from "../images/prod-3.jpg";
 import product4 from "../images/prod-4.webp";
 import product5 from "../images/prod-5.avif";
@@ -113,7 +113,7 @@ export const productData =[
   },
   {
     id: "2",
-    img: product2,
+    img: product1,
     name: "Hooodie",
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Hooodie",
