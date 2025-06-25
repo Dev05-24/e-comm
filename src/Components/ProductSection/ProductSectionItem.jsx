@@ -27,7 +27,8 @@ const ProductSectionItem = ({
   const defaultColor = color[0];
   return (
     <div>
-      <div className="w-80 bg-[#a8b7bd] p-2">
+      {/* bg-[#a8b7bd] */}
+      <div className="w-80  bg-[#d4af37] p-2">
         <div className="flex flex-col gap-3">
         <CardHeader floated={false} className="w-full p-0 m-0">
           <img
@@ -73,7 +74,7 @@ const ProductSectionItem = ({
                 toast.success(`${name} added to cart`);
               }}
               ripple={true}
-              className="px-3 bg-[#1e9ac0] cursor-pointer transition transform hover:scale-110 duration-300 ease-in-out font-bold"
+              className="px-3 bg-[#0f172a] cursor-pointer transition transform hover:scale-110 duration-300 ease-in-out font-bold"
             >
               Add to Cart
             </Button>

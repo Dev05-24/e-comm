@@ -18,7 +18,7 @@ const NavigateButtons = () => {
             return(
                 <div key={index}>
                   <Link to={"/filteredProducts/" + button}>
-                    <button onClick={() => dispatch(filterProducts(button))} className=' rounded-lg p-3 font-bold bg-[#20718a] text-white text-sm hover:scale-125 duration-300 ease-in-out cursor-pointer'
+                    <button onClick={() => dispatch(filterProducts(button))} className=' rounded-lg p-3 font-bold bg-[#d4af37] text-white text-sm hover:scale-125 duration-300 ease-in-out cursor-pointer'
                      >{button}</button>
                   </Link>
                 </div>

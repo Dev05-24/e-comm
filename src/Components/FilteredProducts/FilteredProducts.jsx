@@ -53,7 +53,7 @@ const FilteredProducts = () => {
                 size="lg"
                 variant="outlined"
                 color="yellow"
-                className="w-full sm:w-auto px-3 py-2 font-bold bg-[#20718a] text-lg border-none cursor-pointer text-white hover:scale-110 duration-300 ease-in-out"
+                className="w-full sm:w-auto px-3 py-2 font-bold  bg-[#d4af37] text-lg border-none cursor-pointer text-white transform transition hover:scale-110 duration-300 ease-in-out"
                 onClick={() => dispatch(filterGender(item))}
               >
                 {item}
@@ -64,7 +64,7 @@ const FilteredProducts = () => {
               size="lg"
               variant="outlined"
               color="yellow"
-              className="w-full sm:w-auto px-3 py-2 font-bold bg-[#20718a] text-lg border-none cursor-pointer text-white hover:scale-110 duration-300 ease-in-out"
+              className="w-full sm:w-auto px-3 py-2 font-bold bg-[#d4af37] text-lg border-none cursor-pointer text-white transform transition hover:scale-110 duration-300 ease-in-out"
               onClick={() => dispatch(sortByPrice())}
             >
               High Price
@@ -77,7 +77,7 @@ const FilteredProducts = () => {
                   size="lg"
                   variant="outlined"
                   color="yellow"
-                  className="w-full sm:w-auto px-3 py-2 font-bold bg-[#20718a] text-lg border-none cursor-pointer text-white hover:scale-110 duration-300 ease-in-out"
+                  className="w-full sm:w-auto px-3 py-2 font-bold bg-[#d4af37] text-lg border-none cursor-pointer text-white transform transition hover:scale-110 duration-300 ease-in-out"
                 >
                   Select a color
                 </Button>
@@ -87,7 +87,7 @@ const FilteredProducts = () => {
                   <MenuItem
                     key={index}
                     style={{ color: item }}
-                    className="text-[15px] font-semibold"
+                    className="text-[15px] font-semibold my-1"
                     onClick={() => dispatch(filterByColor(item))}
                   >
                     {item}
@@ -104,7 +104,7 @@ const FilteredProducts = () => {
                   size="lg"
                   variant="outlined"
                   color="yellow"
-                  className="w-full sm:w-auto px-3 py-2 font-bold bg-[#20718a] text-lg border-none cursor-pointer text-white hover:scale-110 duration-300 ease-in-out"
+                  className="w-full sm:w-auto px-3 py-2 font-bold bg-[#d4af37] text-lg border-none cursor-pointer text-white transform transition hover:scale-110 duration-300 ease-in-out"
                 >
                   Select a size
                 </Button>
@@ -113,7 +113,7 @@ const FilteredProducts = () => {
                 {sizeButtons.map((item, index) => (
                   <MenuItem
                     key={index}
-                    className="text-[15px] font-semibold"
+                    className="text-[15px] font-semibold border py-1 my-1 hover:cursor-pointer hover:bg-[#d4af37] hover:text-white"
                     onClick={() => dispatch(filterBySize(item))}
                   >
                     {item}
@@ -127,7 +127,7 @@ const FilteredProducts = () => {
               size="lg"
               variant="outlined"
               color="yellow"
-              className="w-full sm:w-auto px-3 py-2 font-bold bg-[#20718a] text-lg border-none cursor-pointer text-white hover:scale-110 duration-300 ease-in-out"
+              className="w-full sm:w-auto px-3 py-2 font-bold bg-[#d4af37] text-lg border-none cursor-pointer text-white transform transition hover:scale-110 duration-300 ease-in-out"
               onClick={() => dispatch(filterProducts(type))}
             >
               Clear Filter

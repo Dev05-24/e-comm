@@ -36,10 +36,10 @@ const Cart = ({ openModal, setOpen }) => {
           >
             {/* Modal header */}
             <div className="flex items-center justify-between p-4 border-b rounded-t border-gray-200 dark:border-gray-600">
-              <h3 className="text-3xl font-bold text-[#20718a]">
+              <h3 className="text-3xl font-bold text-[#d4af37]">
                 Shopping Cart
               </h3>
-              <p className="text-3xl font-bold text-[#20718a]">
+              <p className="text-3xl font-bold text-[#d4af37]">
                 Grand Total :{" "}
                 <span className="text-white font-semibold"> {totalPrice}$</span>
               </p>
@@ -78,7 +78,7 @@ const Cart = ({ openModal, setOpen }) => {
                         />
                         <div className="ml-3">
                           <div className="flex flex-col items-start">
-                            <h4 className="text-2xl text-[#20718a] font-bold mb-2">
+                            <h4 className="text-2xl text-[#d4af37] font-bold mb-2">
                               {item.name}
                             </h4>
                           </div>
@@ -87,7 +87,7 @@ const Cart = ({ openModal, setOpen }) => {
                           </div>
                         </div>
                       </div>
-                      <div className="p-2 flex flex-col items-start justify-around text-[#20718a]">
+                      <div className="p-2 flex flex-col items-start justify-around text-[#d4af37]">
                         <p className="font-bold">
                           Selected Size :{" "}
                           <span className="text-sm text-white font-semibold">
@@ -125,7 +125,7 @@ const Cart = ({ openModal, setOpen }) => {
                               onClick={() => { dispatch(removeFromCart(item))
                                 toast.error(`${item.name} removed from cart!`);
                               }}
-                              className="text-white text-sm bg-[#20718a] p-2 mt-3 font-semibold cursor-pointer hover:scale-110 duration-300 ease-in-out"
+                              className="text-white text-sm bg-[#d4af37] p-2 mt-3 font-semibold cursor-pointer hover:scale-110 duration-300 ease-in-out"
                             >
                               Remove
                             </Button>
@@ -153,7 +153,7 @@ const Cart = ({ openModal, setOpen }) => {
           >
             {/* Modal header */}
             <div className="flex items-center justify-between p-4 border-b rounded-t border-gray-200 dark:border-gray-600">
-              <h3 className="text-3xl font-bold text-[#20718a]">
+              <h3 className="text-3xl font-bold text-[#d4af37]">
                 Shopping Cart
               </h3>
               <button

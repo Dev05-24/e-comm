@@ -17,7 +17,7 @@ const ProductCard = ({ id, name, text, img, price, color}) => {
       <Card 
       onClick={() => dispatch(singleProduct(id))}
       // style={{ boxShadow: '0 0 20px 1px white' }}
-      className="rounded-2xl bg-white shadow-md flex flex-col mb-10 transition transform hover:scale-105 duration-200 ease-in-out p-2">
+      className="rounded-2xl bg-white shadow-md flex flex-col mb-10 transition transform hover:scale-110 duration-200 ease-in-out p-2">
         <img
           src={img}
           alt="card-image"

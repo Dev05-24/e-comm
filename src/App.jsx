@@ -9,6 +9,7 @@ import { Navigate } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer/Footer";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   const user = useSelector((state) => state.user.user);
@@ -20,8 +21,9 @@ function App() {
   };
   return (
     <>
-      <div className="App bg-[#212222]">
+      <div className="App bg-[#0f172a]">
         <BrowserRouter>
+        <ScrollToTop />
           <Routes>
             <Route
               path="/"

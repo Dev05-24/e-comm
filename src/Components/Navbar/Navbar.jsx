@@ -20,7 +20,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   return (
     <>
-    <div className="fixed top-0 left-0 z-50 bg-[#222222] w-full shadow-md">
+    <div className="fixed top-0 left-0 z-50 bg-[#0f172a] w-full shadow-md">
       {/* div for image and button for login wish list and shopping cart */}
       <div className="flex flex-col md:flex-row justify-evenly items-center px-4 gap-5 sm:gap-0">
         {/* for image */}
@@ -86,7 +86,7 @@ const Navbar = () => {
                   mount: { scale: 1, y: 0 },
                   unmount: { scale: 0, y: 25 },
                 }}
-                 className="bg-[#20718a] text-white ml-2 px-4 py-2 rounded-lg shadow-lg z-60"
+                 className="bg-[#d4af37] text-white ml-2 px-4 py-2 rounded-lg shadow-lg z-60"
               >
                 <p className="font-bold text-lg text-white">
                   {name.charAt("0").toUpperCase() + name.slice(1)}

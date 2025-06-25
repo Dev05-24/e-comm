@@ -107,7 +107,7 @@ const SingleProduct = () => {
           {/* Add to Cart Button */}
           <Tooltip>
             <Button
-              className="w-[50%] mx-auto bg-[#212222] hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer"
+              className="w-[50%] mx-auto bg-[#d4af37] hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer"
               onClick={handleAddToCart}
             >
               Add to cart
