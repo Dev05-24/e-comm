@@ -31,17 +31,17 @@ const Cart = ({ openModal, setOpen }) => {
           onClick={() => setOpen(false)} // clicking outside modal closes it
         >
           <div
-            className="relative p-4 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-lg shadow-sm bg-[#212222]"
+            className="relative p-4 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-lg shadow-sm bg-gradient-to-r from-green-950 to-yellow-50"
             onClick={stopPropagation} // stop closing when clicking inside modal
           >
             {/* Modal header */}
             <div className="flex items-center justify-between p-4 border-b rounded-t border-gray-200 dark:border-gray-600">
-              <h3 className="text-3xl font-bold text-[#d4af37]">
+              <h3 className="text-3xl font-bold text-white">
                 Shopping Cart
               </h3>
-              <p className="text-3xl font-bold text-[#d4af37]">
+              <p className="text-3xl font-bold text-white">
                 Grand Total :{" "}
-                <span className="text-white font-semibold"> {totalPrice}$</span>
+                <span className="text-black font-semibold"> {totalPrice}$</span>
               </p>
               <button
                 type="button"
@@ -78,44 +78,44 @@ const Cart = ({ openModal, setOpen }) => {
                         />
                         <div className="ml-3">
                           <div className="flex flex-col items-start">
-                            <h4 className="text-2xl text-[#d4af37] font-bold mb-2">
+                            <h4 className="text-2xl text-white font-bold mb-2">
                               {item.name}
                             </h4>
                           </div>
                           <div className="max-w-xs">
-                            <p className="text-sm text-white">{item.text}</p>
+                            <p className="text-md text-white">{item.text}</p>
                           </div>
                         </div>
                       </div>
-                      <div className="p-2 flex flex-col items-start justify-around text-[#d4af37]">
+                      <div className="p-2 flex flex-col items-start justify-around text-green-950">
                         <p className="font-bold">
                           Selected Size :{" "}
-                          <span className="text-sm text-white font-semibold">
+                          <span className="text-sm font-semibold">
                             {item.size}
                           </span>
                         </p>
                         <p className="font-bold">
                           Selected Color :{" "}
                           <span
-                            className="rounded-full text-white px-2 ml-2 text-sm font-semibold"
+                            className="rounded-full px-2 ml-2 text-sm font-semibold"
                             style={{ backgroundColor: item.color }}
                           ></span>
                         </p>
                         <p className="font-bold">
                           Quantity :{" "}
-                          <span className=" ml-2 text-sm text-white font-semibold">
+                          <span className=" ml-2 text-sm font-semibold">
                             {item.amount}
                           </span>
                         </p>
                         <p className="font-bold">
                           Single Item Price :{" "}
-                          <span className=" ml-2 text-sm text-white font-semibold">
+                          <span className=" ml-2 text-sm font-semibold">
                             {item.price}$
                           </span>
                         </p>
                         <p className="font-bold">
                           Total Item Price :{" "}
-                          <span className=" ml-2 text-sm text-white font-semibold">
+                          <span className=" ml-2 text-sm font-semibold">
                             {item.totalPrice}$
                           </span>
                         </p>
@@ -125,7 +125,7 @@ const Cart = ({ openModal, setOpen }) => {
                               onClick={() => { dispatch(removeFromCart(item))
                                 toast.error(`${item.name} removed from cart!`);
                               }}
-                              className="text-white text-sm bg-[#d4af37] p-2 mt-3 font-semibold cursor-pointer hover:scale-110 duration-300 ease-in-out"
+                              className="text-white text-sm bg-green-950 px-4 py-3 mt-3 font-bold cursor-pointer hover:scale-110 duration-300 ease-in-out"
                             >
                               Remove
                             </Button>
@@ -148,12 +148,12 @@ const Cart = ({ openModal, setOpen }) => {
           onClick={() => setOpen(false)} // clicking outside modal closes it
         >
           <div
-            className="relative p-4 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg shadow-sm dark:bg-gray-700  "
+            className="relative p-4 w-full max-w-4xl max-h-[90vh] overflow-y-auto text-white bg-gradient-to-r from-green-950 to-yellow-50 rounded-lg shadow-sm"
             onClick={stopPropagation} // stop closing when clicking inside modal
           >
             {/* Modal header */}
             <div className="flex items-center justify-between p-4 border-b rounded-t border-gray-200 dark:border-gray-600">
-              <h3 className="text-3xl font-bold text-[#d4af37]">
+              <h3 className="text-3xl font-bold">
                 Shopping Cart
               </h3>
               <button
@@ -179,10 +179,10 @@ const Cart = ({ openModal, setOpen }) => {
 
             {/* Modal body */}
             <div className="p-4 space-y-4">
-              <h1 className="text-xl font-semibold text-white">
+              <h1 className="text-xl font-semibold">
                 Your bag is empty
               </h1>
-              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              <p className="text-base leading-relaxed ">
                 Add some products
               </p>
             </div>

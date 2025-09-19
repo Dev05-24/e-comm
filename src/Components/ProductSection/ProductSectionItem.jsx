@@ -27,17 +27,16 @@ const ProductSectionItem = ({
   const defaultColor = color[0];
   return (
     <div>
-      {/* bg-[#a8b7bd] */}
-      <div className="w-80  bg-[#d4af37] p-2">
+      <div className="w-80  bg-gradient-to-tl from-green-800 to-yellow-100 p-2 rounded-2xl">
         <div className="flex flex-col gap-3">
         <CardHeader floated={false} className="w-full p-0 m-0">
           <img
             src={img}
             alt={name}
-            className="h-[200px] w-full object-cover shadow-xl"
+            className="h-[200px] w-full object-cover shadow-xl rounded-xl"
           />
         </CardHeader>
-        <CardBody className="text-left flex flex-col">
+        <CardBody className="text-left flex flex-col text-white">
           <Typography variant="h4" className="mb-3 font-extrabold">
             {name}
           </Typography>
@@ -74,7 +73,7 @@ const ProductSectionItem = ({
                 toast.success(`${name} added to cart`);
               }}
               ripple={true}
-              className="px-3 bg-[#0f172a] cursor-pointer transition transform hover:scale-110 duration-300 ease-in-out font-bold"
+              className="px-3 bg-white/20 cursor-pointer transition transform hover:scale-110 duration-300 ease-in-out font-bold"
             >
               Add to Cart
             </Button>

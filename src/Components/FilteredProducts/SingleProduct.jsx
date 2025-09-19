@@ -46,17 +46,17 @@ const SingleProduct = () => {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen gap-10 py-30 mb-4">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10 ">
         <img
           className="h-[250px] w-[300px] object-cover md:w-auto md:h-[450px] rounded-lg"
           src={product.img}
           alt={product.name}
         />
 
-        <div className="mx-5 bg-white backdrop-blur-md text-white p-6 rounded-xl shadow-lg max-w-lg flex flex-col">
-          <h3 className="text-lg md:text-2xl font-extrabold pb-3 text-[#212222]">{product.name}</h3>
-          <p className="text-xl font-bold text-black  pb-3">15% OFF</p>
-          <p className="md:text-lg pb-3 text-black">{product.text}</p>
+        <div className="mx-5 backdrop-blur-md text-white p-6 rounded-xl shadow-lg max-w-lg flex flex-col bg-gradient-to-br from-green-950 to-yellow-50">
+          <h3 className="text-lg md:text-2xl font-extrabold pb-3">{product.name}</h3>
+          <p className="text-xl font-bold pb-3">15% OFF</p>
+          <p className="md:text-lg pb-3">{product.text}</p>
 
           {/* Size Picker */}
           <div className="pb-4">
@@ -71,7 +71,7 @@ const SingleProduct = () => {
               name="size"
               value={size}
               onChange={(e) => setSize(e.target.value)}
-              className="w-full p-2.5 rounded-lg bg-[#212222] dark:border-gray-600 text-sm"
+              className="w-full p-2.5 rounded-lg shadow-lg bg-white/20 text-sm text-black outline-none"
             >
               {product.size.map((sz, index) => (
                 <option key={index} value={sz}>
@@ -82,7 +82,7 @@ const SingleProduct = () => {
           </div>
 
           {/* Color Picker */}
-          <div className="pb-4">
+          <div className="pb-6">
             <label
               htmlFor="color"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -94,7 +94,7 @@ const SingleProduct = () => {
               name="color"
               value={color}
               onChange={(e) => setColor(e.target.value)}
-              className="w-full p-2.5 rounded-lg bg-[#212222] dark:border-gray-600 text-sm"
+              className="w-full p-2.5 rounded-lg shadow-lg bg-white/20 text-sm text-black outline-none"
             >
               {product.color.map((clr, index) => (
                 <option key={index} value={clr}>
@@ -107,7 +107,7 @@ const SingleProduct = () => {
           {/* Add to Cart Button */}
           <Tooltip>
             <Button
-              className="w-[50%] mx-auto bg-[#d4af37] hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer"
+              className="w-[50%] mx-auto bg-green-950 hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer"
               onClick={handleAddToCart}
             >
               Add to cart

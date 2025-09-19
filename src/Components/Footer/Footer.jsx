@@ -49,8 +49,8 @@ const Footer = () => {
         </div>
       </div>
        <div className="text-center p-3">
-          <p className="text-white text-xl font-bold">
-             © {new Date().getFullYear()} Devashish Kunwar. All rights reserved.
+          <p className="text-black text-xl font-bold">
+             © {new Date().getFullYear()} <span className="text-white">Devashish Kunwar</span> All rights reserved.
           </p>
         </div>
     </div>

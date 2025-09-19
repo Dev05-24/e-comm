@@ -20,7 +20,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   return (
     <>
-    <div className="fixed top-0 left-0 z-50 bg-[#0f172a] w-full shadow-md">
+    <div className="fixed top-0 left-0 z-50 bg-[#0f172a] w-full shadow-md bg-gradient-to-r from-yellow-50 to-green-950">
       {/* div for image and button for login wish list and shopping cart */}
       <div className="flex flex-col md:flex-row justify-evenly items-center px-4 gap-5 sm:gap-0">
         {/* for image */}

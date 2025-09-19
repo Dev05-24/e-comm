@@ -17,14 +17,14 @@ const ProductCard = ({ id, name, text, img, price, color}) => {
       <Card 
       onClick={() => dispatch(singleProduct(id))}
       // style={{ boxShadow: '0 0 20px 1px white' }}
-      className="rounded-2xl bg-white shadow-md flex flex-col mb-10 transition transform hover:scale-110 duration-200 ease-in-out p-2">
+      className="rounded-2xl bg-gradient-to-tl from-green-800 to-yellow-100 text-white shadow-md flex flex-col mb-10 transition-all transform hover:scale-105 duration-400 ease-in-out p-2">
         <img
           src={img}
           alt="card-image"
           className="h-55 w-full object-cover rounded-t-2xl"
         />
       <CardBody className="py-3">
-        <Typography className="mb-2 text-2xl font-extrabold text-gray-900">
+        <Typography className="mb-2 text-2xl font-extrabold">
           {name}
         </Typography>
         <Typography className="font-semibold text-sm text-left mb-2">

@@ -7,7 +7,7 @@ const ProductSection = () => {
     <>
     <div id="product-section">
       <div className='pt-9 w-[50%] sm:w-[50%] mx-auto rounded-md'>
-        <h3 className='text-white text-center transition ease-in-out duration-200 text-3xl md:text-4xl lg:text-5xl mt-10 font-extrabold'>SUMMER T-Shirt SALE 30%</h3>
+        <h3 className='text-green-950 text-center transition ease-in-out duration-200 text-3xl md:text-4xl lg:text-5xl mt-10 font-extrabold'>SUMMER T-Shirt <span className='text-white'>SALE 30%</span></h3>
       </div>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 justify-items-center mx-auto gap-10 py-10 max-w-6xl'>
         {productData.map((product, index) => {

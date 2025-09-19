@@ -21,7 +21,7 @@ function App() {
   };
   return (
     <>
-      <div className="App bg-[#0f172a]">
+      <div className="App bg-gradient-to-r from-yellow-50 to-green-950">
         <BrowserRouter>
         <ScrollToTop />
           <Routes>

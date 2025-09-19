@@ -21,8 +21,8 @@ const Login = () => {
     setValues({ ...values, [name]: value });
   };
   return (
-    <div className="flex h-screen justify-center items-center bg-[#212222] px-4">
-      <div className="w-full max-w-lg p-3 border border-gray-200 rounded-4xl shadow-md sm:p-6 md:p-8 dark:border-gray-700 bg-[#d4af37]">
+    <div className="flex h-screen justify-center items-center px-4">
+      <div className="w-full max-w-lg p-3 rounded-4xl shadow-md sm:p-6 md:p-8 bg-white/60 bg-gradient-to-r from-green-950 to-yellow-50">
         <form
           className="space-y-10 flex flex-col font-semibold"
           onSubmit={handleSubmit}
@@ -41,7 +41,8 @@ const Login = () => {
               type="text"
               name="name"
               autoComplete="off"
-              className="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
+              className="shadow-lg
+              bg-gradient-to-r from-yellow-50 to-green-950 text-md placeholder:font-bold rounded-lg block w-full px-3 py-4 outline-none placeholder:text-black"
               placeholder="name"
               required
               value={values.name}
@@ -60,7 +61,8 @@ const Login = () => {
               name="password"
               autoComplete="new-password"
               placeholder="password"
-              className="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
+              className="shadow-lg
+              bg-gradient-to-r from-yellow-50 to-green-950 text-md placeholder:font-bold rounded-lg block w-full px-3 py-4 outline-none placeholder:text-black"
               value={values.password}
               onChange={onChange}
               required
@@ -81,21 +83,19 @@ const Login = () => {
               <input
                 type="text"
                 name="image"
-                placeholder="Image url address"
-                className="bg-gray-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
+                placeholder="Image url address (Optional)"
+                className="shadow-lg
+              bg-gradient-to-r from-yellow-50 to-green-950 text-md placeholder:font-bold rounded-lg block w-full px-3 py-4 outline-none placeholder:text-black"
                 value={values.image}
                 onChange={onChange}
                 autoComplete="off"
               />
             </div>
-            <div className="text-lg font-bold text-white text-left px-1 pt-2">
-              Image is optional
-            </div>
           </div>
 
           <button
             type="submit"
-            className="w-[50%] mx-auto text-white bg-[#212222] hover:scale-110 duration-400 ease-in-out font-bold rounded-lg px-5 py-2.5 cursor-pointer"
+            className="w-[50%] mx-auto text-white bg-gradient-to-r from-yellow-50 to-green-950 shadow-lg hover:scale-110 duration-500 ease-in-out font-bold rounded-lg px-5 py-2.5 cursor-pointer"
           >
             Sign In
           </button>
